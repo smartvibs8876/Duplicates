@@ -1,23 +1,18 @@
-def readFileContentsInADict(*files) -> dict:
-    fileDict = dict()
-    for file in files:
-        txtFile = open(file, "r")
-        fileContent = txtFile.read()
-        fileContentList = fileContent.split("\n")
-        for line in fileContentList:
-            key, value = line.split("/")
-            if key not in fileDict.keys():
-                fileDict[key] = list()
-            fileDict[key].append(value)
-    return fileDict
+import os
+import sys
+
+folderDict = dict()
 
 try:
-    fileDict = readFileContentsInADict(r"C:\Users\AVVVER744\DocumentsVibs\OpenCETraining\PackageList\packages.txt")
-except Exception:
-    print("File error")
 
-for key in fileDict.keys():
-    packages = fileDict[key]
+    for i in range( 1 , len(sys.argv) ):
+        folderDict[ sys.argv[i] ] = os.listdir( sys.argv[i] )
+
+except Exception:
+    print("Error in fetching the files")
+
+for key in folderDict.keys():
+    packages = folderDict[key]
     packagesConsidered = list()
     for i in range(0,len(packages)):
         if(packages[i] in packagesConsidered):
