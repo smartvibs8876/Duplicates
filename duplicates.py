@@ -35,4 +35,6 @@ for key in folderDict.keys():
                 duplicateList.append(packages[j])
                 packagesConsidered.append(packages[i])
         if(duplicates == True):
-            print(duplicateList)
+            for item in duplicateList:
+                print( item , end="  ")
+            print("**********************************************************************************************")
