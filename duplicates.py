@@ -3,14 +3,13 @@ import sys
 
 folderDict = dict()
 
-try:
 
-    for i in range( 1 , len(sys.argv) ):
-        print(sys.argv[i])
-        folderDict[ sys.argv[i] ] = os.listdir( sys.argv[i] )
 
-except Exception:
-    print("Error in fetching the files")
+for i in range( 1 , len(sys.argv) ):
+    print(sys.argv[i])
+    folderDict[ sys.argv[i] ] = os.listdir( sys.argv[i] )
+
+
 
 print(folderDict)
 # for key in folderDict.keys():
