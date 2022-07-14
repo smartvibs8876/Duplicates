@@ -4,11 +4,13 @@ import sys
 folderDict = dict()
 
 
+try:
+    for i in range( 1 , len(sys.argv) ):
+        print(sys.argv[i])
+        folderDict[ sys.argv[i] ] = os.listdir( sys.argv[i] )
 
-for i in range( 1 , len(sys.argv) ):
-    print(sys.argv[i])
-    folderDict[ sys.argv[i] ] = os.listdir( sys.argv[i] )
-
+except Exception:
+    print("Failed to load the files")
 
 
 print(folderDict)
