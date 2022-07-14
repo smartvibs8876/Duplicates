@@ -12,14 +12,6 @@ try:
 except Exception:
     print("Failed to load the files")
 
-# def readFileContentsInADict(*files) -> dict:
-#     fileDict = dict()
-#     for file in files:
-#         txtFile = open(file, "r")
-#         fileContent = txtFile.read()
-#         fileContentList = fileContent.split("\n")
-#         fileDict[file] = fileContentList
-#     return fileDict
 
 def extractBasePackageName(packageName: str) -> str:
     tmp = packageName.split("-")
@@ -39,7 +31,6 @@ def extractBasePackageName(packageName: str) -> str:
     return extractedPackageName
 
 
-#fileDict = readFileContentsInADict(r"C:\Users\AVVVER744\DocumentsVibs\OpenCETraining\Helper\linux-64.txt",r"C:\Users\AVVVER744\DocumentsVibs\OpenCETraining\Helper\noarch.txt")
 for key in folderDict.keys():
     packages = folderDict[key]
     packagesConsidered = list()
