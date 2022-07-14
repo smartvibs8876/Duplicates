@@ -37,4 +37,5 @@ for key in folderDict.keys():
         if(duplicates == True):
             for item in duplicateList:
                 print( item , end="  ")
+            print("")
             print("**********************************************************************************************")
