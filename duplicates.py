@@ -32,6 +32,7 @@ def extractBasePackageName(packageName: str) -> str:
 
 
 for key in folderDict.keys():
+    print("Reading from folder ",key)
     packages = folderDict[key]
     packagesConsidered = list()
     for i in range(0,len(packages)):
